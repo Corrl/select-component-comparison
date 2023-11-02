@@ -48,8 +48,9 @@
     </select>
 
     <ul aria-label="?">
-        <li>Same highlighting of already selected and currently selected item in list</li>
-        <li>Selected options not removed from list - would be better? -> option to enable?</li>
+        <li>Error when importing css from package</li>
+        <li>Same highlighting of already selected and currently selected item in dropdown</li>
+        <li>Selected options not removed from list -> setting 'hideSelected: true'</li>
         <li>'selected: false' on last selected option object (see event log)</li>
         <li>Focus styling not visible with dark theme</li>
     </ul>

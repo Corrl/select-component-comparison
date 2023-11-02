@@ -1,9 +1,10 @@
 <script>
     import './app.css'
-    import './own.css'
+    import './select-component-wrapper.css'
 
     import SlimSelect from "./lib/SlimSelect.svelte";
     import TomSelect from "./lib/TomSelect.svelte";
+    import Choices from "./lib/Choices.svelte";
 
     const frameworks = ['angular', 'ember', 'meteor', 'react', 'solid', 'svelte', 'vue']
 
@@ -13,15 +14,6 @@
             value: value,
         }
     })
-
-    function slimSelectOptions(values) {
-        return values.map(value => {
-            return {
-                text: value[0].toUpperCase() + value.substring(1),
-                value: value,
-            }
-        })
-    }
 </script>
 
 <main>
@@ -31,20 +23,21 @@
     <div id="select-wrapper">
         <SlimSelect {options}/>
         <TomSelect {options}/>
+        <Choices {options}/>
     </div>
 </main>
 
 <style>
     #select-wrapper {
         display: grid;
-        grid-gap: 3rem;
+        gap: 3rem;
         grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
         /*border: 1px solid teal;*/
     }
 
     p {
         color: var(--svelte-orange);
-        margin-bottom: 4rem;
+        margin-bottom: 5rem;
         font-size: .9rem;
     }
 </style>

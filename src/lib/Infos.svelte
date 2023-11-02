@@ -20,4 +20,11 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    .links {
+        font-size: .9rem;
+        display: grid;
+        grid-auto-flow: column;
+        gap: .5rem;
+    }
 </style>
