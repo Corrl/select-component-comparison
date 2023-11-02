@@ -7,9 +7,12 @@
     function initSlimSelect(selectElem) {
         new SlimSelect({
             select: selectElem,
+            settings: {
+                searchHighlight: true,
+            },
             events: {
                 afterChange(newVal) {
-                    console.log('afterChange event - newVal: ', newVal)
+                    console.log('afterChange event - newVal:', newVal)
                 }
             }
         })
@@ -22,6 +25,7 @@
             linkWebsite="https://slimselectjs.com/"
             linkGithub="https://github.com/brianvoe/slim-select"
     />
+
     <label for="slim-select-single">Single</label>
     <select id="slim-select-single"
             use:initSlimSelect
@@ -43,8 +47,18 @@
         {/each}
     </select>
 
+    <ul aria-label="?">
+        <li>Same highlighting of already selected and currently selected item in list</li>
+        <li>Selected options not removed from list - would be better? -> option to enable?</li>
+        <li>'selected: false' on last selected option object (see event log)</li>
+        <li>Focus styling not visible with dark theme</li>
+    </ul>
 </div>
 
 <style>
     @import '../slimselect.css';
+
+    p {
+        margin-top: 2rem;
+    }
 </style>

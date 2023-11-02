@@ -14,6 +14,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "slim-select": "^2.6.0"
+    "slim-select": "^2.6.0",
+    "tom-select": "^2.3.0"
   }
 }

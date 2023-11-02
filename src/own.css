@@ -5,9 +5,14 @@
 .select-component-wrapper {
     background: white;
     text-align: left;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     border-radius: var(--border-radius);
-    /*border: 1px solid purple;*/
+}
+
+@media (prefers-color-scheme: dark) {
+    .select-component-wrapper {
+        background: black;
+    }
 }
 
 label {
@@ -17,8 +22,17 @@ label {
     margin: .8rem 0 .4rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    .select-component-wrapper {
-        background: black;
-    }
+ul {
+    margin-top: 2rem;
+    padding: 0;
+    font-size: .9rem;
+}
+
+ul::before {
+    content: '🤔';
+    font-size: 1.1rem;
+}
+
+ul > li {
+    margin-left: 1.25rem;
 }
