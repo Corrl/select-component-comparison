@@ -4,8 +4,7 @@
     import 'tom-select/dist/css/tom-select.default.css'
 
     export let options = [{value: "opt1", text: "Option 1"}];
-
-    let placeholder = "Select your favorite framework";
+    export let placeholder = '';
 
     function initTomSelect(inputElem, config = {}) {
         const select = new TomSelect(inputElem, config)

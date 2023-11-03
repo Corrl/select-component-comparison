@@ -2,8 +2,8 @@
     import Select from 'svelte-select';
     import Infos from "./Infos.svelte";
 
-    export let options = []
-    let placeholder = "Select your favorite framework"
+    export let options = [];
+    export let placeholder = '';
 
     function handleChange({detail}) {
         console.log('change event - detail:', detail)

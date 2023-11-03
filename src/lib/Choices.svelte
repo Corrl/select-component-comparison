@@ -3,8 +3,8 @@
     import Choices from "choices.js";
     import 'choices.js/public/assets/styles/choices.css'
 
-    export let options = [
-    ]
+    export let options = [];
+    export let placeholder = '';
 
     function initChoices(selectElem) {
         const config = {
@@ -38,7 +38,7 @@
     <select id="slim-select-single"
             use:initChoices
     >
-        <option value="">Select your favorite framework</option>
+        <option value="">{placeholder}</option>
         {#each options as option}
             <option value={option.value}>{option.label}</option>
         {/each}
@@ -49,7 +49,7 @@
             multiple
             use:initChoices
     >
-        <option value="">Select your favorite frameworks</option>
+        <option value="">{placeholder + 's'}</option>
         {#each options as option}
             <option value={option.value}>{option.label}</option>
         {/each}
@@ -71,6 +71,7 @@
     </ul>
 </div>
 <style>
+    /*noinspection CssUnusedSymbol*/
     :global(.choices) {
         margin-bottom: 0;
     }

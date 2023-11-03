@@ -16,6 +16,8 @@
             value: value,
         }
     })
+
+    const placeholder = "Select your favourite framework"
 </script>
 
 <main>
@@ -23,10 +25,10 @@
     <p>See logs for change event information</p>
 
     <div id="select-wrapper">
-        <SlimSelect {options}/>
-        <TomSelect {options}/>
-        <Choices {options}/>
-        <SvelteSelect {options}/>
+        <SlimSelect {options} {placeholder}/>
+        <TomSelect {options} {placeholder}/>
+        <Choices {options} {placeholder}/>
+        <SvelteSelect {options} {placeholder}/>
     </div>
 </main>
 

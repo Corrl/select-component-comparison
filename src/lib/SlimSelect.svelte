@@ -3,6 +3,7 @@
     import Infos from "./Infos.svelte";
 
     export let options = [];
+    export let placeholder = '';
 
     function initSlimSelect(selectElem) {
         new SlimSelect({
@@ -30,7 +31,7 @@
     <select id="slim-select-single"
             use:initSlimSelect
     >
-        <option data-placeholder="true">Select your favorite framework</option>
+        <option data-placeholder="true">{placeholder}</option>
         {#each options as option}
             <option value={option.value}>{option.label}</option>
         {/each}
@@ -41,7 +42,7 @@
             multiple
             use:initSlimSelect
     >
-        <option data-placeholder="true">Select your favorite frameworks</option>
+        <option data-placeholder="true">{placeholder + 's'}</option>
         {#each options as option}
             <option value={option.value}>{option.label}</option>
         {/each}
