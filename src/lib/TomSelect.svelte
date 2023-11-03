@@ -33,7 +33,7 @@
     >
         <option value="">{placeholder}</option>
         {#each options as option}
-            <option value={option.value}>{option.text}</option>
+            <option value={option.value}>{option.label}</option>
         {/each}
     </select>
 
@@ -44,11 +44,11 @@
     >
         <option value="">{placeholder + 's'}</option>
         {#each options as option}
-            <option value={option.value}>{option.text}</option>
+            <option value={option.value}>{option.label}</option>
         {/each}
     </select>
 
-    <ul aria-label="?">
+    <ul>
         <li>Different styling of single/multiple element (background & arrow)</li>
         <li>Dropdown doesn't seem to adjust position based on available space</li>
         <li>Change event callback has only values, not option objects with all information</li>

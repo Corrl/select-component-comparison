@@ -2,7 +2,7 @@
     import SlimSelect from "slim-select";
     import Infos from "./Infos.svelte";
 
-    export let options = [{text: 'Value 1', value: 'value1'}];
+    export let options = [];
 
     function initSlimSelect(selectElem) {
         new SlimSelect({
@@ -32,7 +32,7 @@
     >
         <option data-placeholder="true">Select your favorite framework</option>
         {#each options as option}
-            <option value={option.value}>{option.text}</option>
+            <option value={option.value}>{option.label}</option>
         {/each}
     </select>
 
@@ -43,11 +43,11 @@
     >
         <option data-placeholder="true">Select your favorite frameworks</option>
         {#each options as option}
-            <option value={option.value}>{option.text}</option>
+            <option value={option.value}>{option.label}</option>
         {/each}
     </select>
 
-    <ul aria-label="?">
+    <ul>
         <li>Error when importing css from package</li>
         <li>Same highlighting of already selected and currently selected item in dropdown</li>
         <li>Selected options not removed from list -> setting 'hideSelected: true'</li>
@@ -58,8 +58,4 @@
 
 <style>
     @import '../slimselect.css';
-
-    p {
-        margin-top: 2rem;
-    }
 </style>

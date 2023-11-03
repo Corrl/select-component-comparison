@@ -5,11 +5,13 @@
     import SlimSelect from "./lib/SlimSelect.svelte";
     import TomSelect from "./lib/TomSelect.svelte";
     import Choices from "./lib/Choices.svelte";
+    import SvelteSelect from "./lib/SvelteSelect.svelte";
 
     const frameworks = ['angular', 'ember', 'meteor', 'react', 'solid', 'svelte', 'vue']
 
     const options = frameworks.map(value => {
         return {
+            label: value[0].toUpperCase() + value.substring(1),
             text: value[0].toUpperCase() + value.substring(1),
             value: value,
         }
@@ -24,6 +26,7 @@
         <SlimSelect {options}/>
         <TomSelect {options}/>
         <Choices {options}/>
+        <SvelteSelect {options}/>
     </div>
 </main>
 
@@ -36,8 +39,9 @@
     }
 
     p {
-        color: var(--svelte-orange);
         margin-bottom: 5rem;
+        color: #ff9400;
         font-size: .9rem;
+        font-weight: bold;
     }
 </style>

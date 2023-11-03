@@ -52,10 +52,9 @@ h1 {
 }
 
 #app {
-    width: 100%;
-    max-width: 1600px;
+    width: min(1600px, 80%);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem 0 10rem 0;
     text-align: center;
     grid-row: 2;
     /*border: 1px solid orangered;*/

@@ -4,16 +4,6 @@
     import 'choices.js/public/assets/styles/choices.css'
 
     export let options = [
-        {
-            value: 'Option 1',
-            label: 'Option 1',
-            selected: true,
-            disabled: false,
-            customProperties: {
-                description: 'Custom description about Option 2',
-                random: 'Another random custom property',
-            }
-        }
     ]
 
     function initChoices(selectElem) {
@@ -50,7 +40,7 @@
     >
         <option value="">Select your favorite framework</option>
         {#each options as option}
-            <option value={option.value}>{option.text}</option>
+            <option value={option.value}>{option.label}</option>
         {/each}
     </select>
 
@@ -61,7 +51,7 @@
     >
         <option value="">Select your favorite frameworks</option>
         {#each options as option}
-            <option value={option.value}>{option.text}</option>
+            <option value={option.value}>{option.label}</option>
         {/each}
     </select>
 
